@@ -1,9 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>DELI-VERY</title>
-    </head>
+<head>
+    <title>Tarantino's</title>
+</head>
+<main>
     <body>
-        <h1>Hello World!!!</h1>
+    <h1>Välkommen till BurgerOnline</h1>
     </body>
+    <h2>Select burger</h2>
+    <p>This is where you execute burger selection</p>
+    <table>
+        <thead>
+        <tr>
+            <th><h2>Animal Style</h2></th>
+            <th><h2>Royale With Cheese</h2></th>
+            <th><h2>Big Kahuna Burger</h2></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><img src="img/innout.jpg" alt="In-N-Out Burger" title="Animal Style" width="200"></td>
+            <td><img src="img/royalewithcheese.jpg" alt="QP" title="Royale With Cheese" width="200"></td>
+            a
+            <td><img src="img/bigkahuna.jpg" alt="BK" title="Big Kahuna" width="200"></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td>
+                <ul>
+                    <li>There are no references to this one</li>
+                    <li>:(</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Do You Know What They Call Quarter Pounder with Cheese in France?</li>
+                    <li>A Royale With Cheese!</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Damn!</li>
+                    <li>That's a good burger!</li>
+                </ul>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+    <h2>Customer Information</h2>
+    <p>This is where you provide necessary information</p>
+    <h2>Delivery Information</h2>
+    <section id="deliveryinformation">
+        <form>
+            <p>
+                <label for="fullname">Full Name</label><br>
+                <input type="text" id="fullname" name="fn" required="required" placeholder="Full Name"><br>
+            </p>
+            <p>
+                <label for="email">E-mail</label><br>
+                <input type="text" id="email" name="fn" required="required" placeholder="E-mail"><br>
+            </p>
+            <p>
+                <label for="payoptions">Payment Options</label><br>
+                <select id="payoptions" name="popt">
+                    <option>Payment Option</option>
+                </select>
+                <br>
+            </p>
+            <p>
+                <input type="radio" id="male" name="gender" checked="checked"><label for="male"> Male</label><br>
+            </p>
+            <input type="radio" id="female" name="gender"><label for="female"> Female</label><br>
+            </p>
+        </form>
+    </section>
+    <p>
+        <button type="submit">Place order</button>
+    </p>
+</main>
+<a href=http://localhost:3000/>Refresh me!</a>
 </html>
