@@ -1,0 +1,89 @@
+body {
+    font-family: monospace,"Times New Roman";
+    background-color: antiquewhite;
+    font-weight: unset;
+    line-height: inherit;
+    font-size: large;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+#tabledata{
+    font-family: monospace;
+    font-size: medium;
+    text-align: left;
+
+
+}
+
+.titles{
+    text-decoration: overline;
+    color: #000000;
+}
+button:hover {
+    color: rgba(255, 0, 67, 0.25);
+}
+#table{
+    background-color: antiquewhite;
+    height: 300px;
+
+}
+
+.header{
+    border: 5px double black;
+    color: antiquewhite;
+    background-image: url("../img/goodburger.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 500px;
+    margin: 0;
+    display: compact;
+    overflow: hidden;
+}
+
+.burgerdisplay{
+    border: 5px double black;
+    margin: 0;
+    padding: 0;
+    height: 300px;
+
+}
+input[type *="radio"]{
+    text-align: left;
+
+}
+.deliveryinformation{
+    border: 5px double black;
+    text-align: center;
+}
+
+.tablewrapper{
+    display:grid;
+    grid-gap: 100px;
+    grid-template-areas:
+    ". . a b c ."
+    ". . a b c ."
+}
+.box{
+    float: left;
+    text-align: left;
+}
+
+.a{
+    grid-area: a;
+}
+.b{
+    grid-area: b;
+}
+.c{
+    grid-area: c;
+}
+
+label {
+    display: compact;
+    margin-bottom: 5px;
+    vertical-align: top;
+}

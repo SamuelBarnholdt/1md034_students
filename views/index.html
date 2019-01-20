@@ -1,57 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Tarantino's</title>
+    <link rel ="stylesheet" type="text/css" href="css/style.css">
+    <title>Vega's</title>
 </head>
-<main>
     <body>
-    <h1>Välkommen till BurgerOnline</h1>
-    </body>
-    <h2>Select burger</h2>
-    <p>This is where you execute burger selection</p>
-    <table>
-        <thead>
-        <tr>
-            <th><h2>Animal Style</h2></th>
-            <th><h2>Royale With Cheese</h2></th>
-            <th><h2>Big Kahuna Burger</h2></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td><img src="img/innout.jpg" alt="In-N-Out Burger" title="Animal Style" width="200"></td>
-            <td><img src="img/royalewithcheese.jpg" alt="QP" title="Royale With Cheese" width="200"></td>
-            a
-            <td><img src="img/bigkahuna.jpg" alt="BK" title="Big Kahuna" width="200"></td>
-        </tr>
-        </tbody>
-        <tfoot>
-        <tr>
-            <td>
-                <ul>
-                    <li>There are no references to this one</li>
-                    <li>:(</li>
-                </ul>
-            </td>
-            <td>
-                <ul>
-                    <li>Do You Know What They Call Quarter Pounder with Cheese in France?</li>
-                    <li>A Royale With Cheese!</li>
-                </ul>
-            </td>
-            <td>
-                <ul>
-                    <li>Damn!</li>
-                    <li>That's a good burger!</li>
-                </ul>
-            </td>
-        </tr>
-        </tfoot>
-    </table>
-    <h2>Customer Information</h2>
-    <p>This is where you provide necessary information</p>
+    <div class="header">
+    <h1>Vega's</h1>
+    <h2>Select burgers</h2>
+    </div>
+    <div class="burgerdisplay">
+    <div class="tablewrapper" align="center">
+        <div class="box a">
+            <h3>Animal Style</h3>
+            <img src="img/innout.jpg" alt="In-N-Out Burger" title="Animal Style" align="center" width="200">
+            <li>There are no references to this one</li>
+            <li>:(</li>
+        </div>
+        <div class="box b">
+            <h3>Royale With Cheese</h3>
+            <img src="img/royalewithcheese.jpg" alt="QP" align="center" title="Royale With Cheese" width="200">
+            <li>Do You Know What They Call Quarter Pounder with Cheese in France?</li>
+            <li>A Royale With Cheese!</li>
+        </div>
+        <div class="box c">
+            <h3>Big Kahuna Burger</h3>
+            <img src="img/bigkahuna.jpg" alt="BK" title="Big Kahuna" align="center" width="200">
+            <li>Mhmm!</li>
+            <li>This is a tasty burger!</li>
+        </div>
+    </div>
+    </div>
+    <div class="deliveryinformation">
     <h2>Delivery Information</h2>
-    <section id="deliveryinformation">
+    <section >
         <form>
             <p>
                 <label for="fullname">Full Name</label><br>
@@ -67,17 +49,16 @@
                     <option>Payment Option</option>
                 </select>
                 <br>
-            </p>
-            <p>
-                <input type="radio" id="male" name="gender" checked="checked"><label for="male"> Male</label><br>
-            </p>
-            <input type="radio" id="female" name="gender"><label for="female"> Female</label><br>
-            </p>
+            </p>            
+            <input type="radio" id="male" name="gender" checked="checked"><label for="male"> Male &emsp;&ensp;&ensp;&ensp;&ensp;&ensp;</label><br>
+            <input type="radio" id="female" name="gender"><label for="female"> Female&ensp;&ensp;&ensp;&ensp;&ensp;</label><br>
+            <input type="radio" id="nonbinary" name="gender"><label for="nonbinary"> Non-binary&ensp;</label><br>
+            <input type="radio" id="undisclosed" name="gender"><label for="undisclosed"> Undisclosed</label><br>
         </form>
     </section>
     <p>
         <button type="submit">Place order</button>
     </p>
-</main>
-<a href=http://localhost:3000/>Refresh me!</a>
+    </div>
+    </body>
 </html>
