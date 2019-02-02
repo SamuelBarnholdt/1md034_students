@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
 <head>
     <link rel ="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/js_script.js" defer></script>
+    <script src="https://vuejs.org/js/vue.js"></script>
+    <script src="js/vue_script.js" defer></script>
     <title>Vega's</title>
 </head>
     <body>
@@ -10,29 +13,30 @@
     <h2>Select burgers</h2>
     </div>
     <div class="burgerdisplay">
-    <div class="tablewrapper" align="center">
-        <div class="box a">
-            <h3>Animal Style</h3>
-            <img src="img/innout.jpg" alt="In-N-Out Burger" title="Animal Style" align="center" width="200">
-            <li>There are no references to this one</li>
-            <li>:(</li>
-        </div>
+        <div class="tablewrapper" align="center">
+            <div class="box a">
+                <h3>Animal Style</h3>
+                <img src="img/innout.jpg" alt="In-N-Out Burger" title="Animal Style" align="center" width="200">
+                <li>There are no references to this one</li>
+                <li>:(</li>
+            </div>
         <div class="box b">
             <h3>Royale With Cheese</h3>
             <img src="img/royalewithcheese.jpg" alt="QP" align="center" title="Royale With Cheese" width="200">
-            <li>Do You Know What They Call Quarter Pounder with Cheese in France?</li>
+            <li align>Do you know what they call a</li>
+            <p> Quarter Pounder with Cheese in France?</p>
             <li>A Royale With Cheese!</li>
         </div>
-        <div class="box c">
-            <h3>Big Kahuna Burger</h3>
+        <div class="box c" id="bigkahuna">
+            <h3 v-html="bc"></h3>
             <img src="img/bigkahuna.jpg" alt="BK" title="Big Kahuna" align="center" width="200">
             <li>Mhmm!</li>
             <li>This is a tasty burger!</li>
         </div>
+        </div>
     </div>
-    </div>
-    <div class="deliveryinformation">
-    <h2>Delivery Information</h2>
+    <div class="deliveryinformation" id="myID">
+    <h2>Välj en Burgare</h2>
     <section >
         <form>
             <p>
@@ -41,12 +45,15 @@
             </p>
             <p>
                 <label for="email">E-mail</label><br>
-                <input type="text" id="email" name="fn" required="required" placeholder="E-mail"><br>
+                <input type="text" id="email" name="ln" required="required" placeholder="E-mail"><br>
             </p>
             <p>
                 <label for="payoptions">Payment Options</label><br>
                 <select id="payoptions" name="popt">
-                    <option>Payment Option</option>
+                    <option>Credit Card</option>
+                    <option>PayPal</option>
+                    <option>Klarna</option>
+                    <option>Blood Diamond</option>
                 </select>
                 <br>
             </p>            
