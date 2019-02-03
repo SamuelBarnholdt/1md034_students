@@ -1,7 +1,7 @@
 
 
 Vue.component('burger',{
-    template: `<p>okey</p>`
+    template: `<h2>Okay</h2>`
 })
 
 var app = new Vue({
@@ -50,6 +50,10 @@ var app = new Vue({
     }
 });
 
+function element(name,path,selectfunc){
+    var out = `<img src="img/` + path + `.jpg">` + `<h2>HAAHHA</h2>`;
+    return out
+}
 
 var bigkahuna = [
     {
