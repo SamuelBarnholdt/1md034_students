@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
 <head>
-    <link rel ="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/js_script.js" defer></script>
     <script src="https://vuejs.org/js/vue.js"></script>
+    <script type="text/javascript" src="menu.js"></script>
     <script src="js/vue_script.js" defer></script>
     <title>Vega's</title>
 </head>
-    <body id="body">
-    <div class="header">
+<body id="body">
+<div class="header">
     <h1>Vega's</h1>
     <h2>Select burgers</h2>
-    </div>
-    <div class="burgerdisplay" id="menuitems">
-        <div class="tablewrapper" align="center">
-            <div class="box a">
-                <h3 style="display: inline-flex" >Animal Style</h3><input type="checkbox" @click="pick1()"></input><br>
-                <img src="img/innout.jpg" alt="In-N-Out Burger" title="Animal Style" align="center" width="200">
-                <li>There are no references to this one</li>
-                <li v-html="item1"><\li>
-            </div>
+</div>
+<div id="app">
+<div class="burgerdisplay" id="menuitems">
+
+    <div class="tablewrapper" align="center">
+        <div class="box a">
+            <burger :name="animal" ></burger>
+        </div>
         <div class="box b">
-            <h3 style="display: inline-flex">Royale With Cheese</h3><input type="checkbox" @click="pick2()" ><br>
+            <h3 style="display: inline-flex">Royale With Cheese</h3><input type="checkbox" v-on:change="pick2()"><br>
             <img src="img/royalewithcheese.jpg" alt="QP" align="center" title="Royale With Cheese" width="200">
+            <ul>
             <li align>Quarter Pounder With Cheese?</li>
             <li>A Royale With Cheese!</li>
             <li v-html="item2"><\li>
+            </ul>
         </div>
-        <div class="box c"  >
+        <div class="box c">
             <h3 v-html="bc" style="display: inline-flex">></h3><input type="checkbox" @click="pick3()"></input><br>
             <img src="img/bigkahuna.jpg" alt="BK" title="Big Kahuna" align="center" width="200">
             <li>Mhmm!</li>
             <li>This is a tasty burger!</li>
             <li v-html="item3"><\li>
         </div>
-        </div>
     </div>
-    <div class="deliveryinformation" id="myID">
+</div>
+<div class="deliveryinformation" >
     <div class="dinfo c">
         <h2>Make Your Order</h2>
         <form>
@@ -57,9 +59,10 @@
                     <option>Blood Diamond</option>
                 </select>
                 <br>
-            </p>            
+            </p>
             <input type="radio" id="male" name="gender" checked="checked"><label for="male"> Male &emsp;&ensp;&ensp;&ensp;&ensp;&ensp;</label><br>
-            <input type="radio" id="female" name="gender"><label for="female"> Female&ensp;&ensp;&ensp;&ensp;&ensp;</label><br>
+            <input type="radio" id="female" name="gender"><label for="female">
+            Female&ensp;&ensp;&ensp;&ensp;&ensp;</label><br>
             <input type="radio" id="nonbinary" name="gender"><label for="nonbinary"> Non-binary&ensp;</label><br>
             <input type="radio" id="undisclosed" name="gender"><label for="undisclosed"> Undisclosed</label><br>
         </form>
@@ -67,10 +70,19 @@
             <button type="submit">Place order</button>
         </p>
     </div>
-        <div class="dinfo d">
-            <p v-html = "orders()"></p>
-        </div>
-
+    <div class="dinfo d">
+        <h2>Ordered Items</h2>
+        <ul id="orders">
+            <li v-for="burger in burgers">
+                <label v-if="">
+                <span v-if="burger.chosen"> {{ burger.name }} </span>
+                <span v-else></span>
+                </label>
+            </li>
+        </ul>
     </div>
-    </body>
+
+</div>
+</div>
+</body>
 </html>
