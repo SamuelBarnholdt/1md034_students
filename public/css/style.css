@@ -52,12 +52,24 @@ input[type *="radio"]{
 
 }
 .deliveryinformation{
-    border: 5px double black;
-    text-align: center;
     margin: 0;
     padding: 0;
+    display:grid;
+    grid-gap: initial;
+    grid-template-areas:
+            ". c . d . ."
+            ". c . d . ."
 }
-
+.dinfo{
+    float: left;
+    text-align: center;
+}
+.c{
+    grid-area: c;
+}
+.d{
+    grid-area: d;
+}
 .tablewrapper{
     margin: 0;
     padding: 0;
@@ -81,6 +93,7 @@ input[type *="radio"]{
 .c{
     grid-area: c;
 }
+
 
 label {
     display: compact;
